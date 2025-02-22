@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 4 - PMN</title>
+</head>
+
+<body>
+
+    <p id="code1"> The eagle is in the </p>
+    <p id="code2"> The fox is in the </p>
+    <p id="code3"> snuck into the garden last night. </p>
+    <p id="code4"> They said it would rain</p>
+    <p id="code5">Does the red robin crow at</p>
+    <p id="code6">Where can I find Mr.</p>
+    <p id="code7">I told the boys to bring tea and</p>
+    <p id="code8">Where's my dough? The cake won't</p>
+    <p id="code9">test</p>
+    <p id="code10">barking, can't fly without umbrella.</p>
+    <p id="code11">The green canary flies at</p>
+    <p id="code12">The oyster owns a fine</p> 
+
+    <!-- Bài tập thực hành với DOM -->
+    <!-- Bài 1 -->
+    <form id="form1">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById("form1");
+        console.log(form.fname.value);
+        console.log(form.lname.value);
+        // Lấy ra đầy đủ họ tên:
+        console.log(form.fname.value + " " + form.lname.value);
+    </script>
+
+
+    <!-- Bài 2 -->
+    <script>
+        // Đặt màu nền cho đoạn văn trong Form
+        form.fname.style.backgroundColor = "lightpink";
+        form.lname.style.backgroundColor = "lightgreen";
+    </script>
+
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type="button" value="Select and Remove">
+    </form>
+
+    <script>
+        //   Đếm và hiển thị các mục danh sách trong màn hình console
+        let dropdown = document.querySelector("#colorSelect");
+        console.log(dropdown.length);
+        for (let i = 0; i < dropdown.length; i++) {
+            console.log(dropdown[i].innerText);
+        } 
+    </script>
+
+    <script src="./code.js"></script>
+    <script src="./DOM.js"></script>
+</body>
+
+</html>

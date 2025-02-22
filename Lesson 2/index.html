@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let number1 = 123;
+        let number2 = 456;
+
+        console.log(number1 * number2);
+        console.log("Tich =" + number1 * number2);
+   
+    // phép gán =
+    // phép so sánh bằng ==
+    // Hãy khai báo 2 số nguyên number1, number2 với giá trị bất kì
+    // Hiển thị ra màn hình: tổng, hiệu, tích, thương
+
+        let number3 = 2000;
+        let number4 = 2013;
+        let hieu = number3 - number4
+
+        console.log("Tong = " + number3 + number4);
+        console.log("Hieu = " + hieu);
+        console.log("Tich = " + number3 * number4);
+        console.log("Thuong = " + number3/number4);
+
+        //Đặt tên biến:
+        //Nguyên tắc 1: Tên biến k chứa kí tự là số ở đầu
+        //Nguyên tắc 2: Ko chứa kí tự đặc biệt kể cả " " trừ "_" và "$ (trong Javascript)"
+        //Nguyên tắc 3: Ko trùng các từ khóa trong 1 biến
+
+        let fullName="Phạm Minh Ngọc";
+
+        //Lấy độ dài 1 xâu kí tự
+        let length = fullName.length;
+        console.log("số lượng kí tự: " + length);
+
+        //Chuẩn hóa xâu: In hoa - .toUpperCase()
+        let fullNameUpper =fullName.toUpperCase();
+        console.log("Xâu đã chuẩn hóa - UPPER: " + fullNameUpper);
+
+        //Chuẩn hóa xâu: In thường - .toLowerCase()
+        let fullNameLower =fullName.toLowerCase();
+        console.log("Xâu đã chuẩn hóa - LOWER: " + fullNameLower);
+
+        //Hãy hiển thị tên từ họ tên ra màn hình console
+        console.log("Tổng tên = " + fullName[10] + fullName[11] + fullName[12] + fullName[13] + fullName[14]);
+
+        //Tách xâu theo kí tự dấu cách " " --> split(" ")
+        let list =fullName.split(" ");
+        console.log("Họ và tên: " + list);
+        console.log("Tên đệm: " + list[1]);
+
+        //Cắt chuỗi [substring (cắt từ A, đến B)]
+        let name=fullName.substring(10,14);
+        console.log("Cắt chuỗi - substring: " + name);
+        
+    </script>
+</body>
+</html>
