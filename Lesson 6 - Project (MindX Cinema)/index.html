@@ -75,7 +75,9 @@
   </div>
 
   
-  <main></main>
+  <main>
+    <div id="list-movie"></div>
+  </main>
 
   <footer>
     <p>Copyright &copy; MindX School</p>
@@ -97,6 +99,20 @@
 
   <script type="module" src="./scripts/config.js"></script>
   <script type="module" src="./scripts/home.js"></script>
+  <!-- <script>
+      const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOWZmYTlhZDRmNzBiNTEyOTI1NGE3MjQwOWRiZWJmZCIsIm5iZiI6MTc0MDI3NTAyNy40MjcsInN1YiI6IjY3YmE3ZDUzYTk2ZGMxODk3OWJlYjkzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IAJ5i6OdX5oMMLlpxraTnzwZa4IOpW_AZqkFB-RBRrU'
+      }
+    };
+
+      fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
+      .then(res => res.json())
+      .then(res => console.log(res))
+      .catch(err => console.error(err));
+  </script> -->
 </body>
 
 </html>
