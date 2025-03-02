@@ -75,3 +75,13 @@
     display: none;
   }
 }
+
+#list-movie{
+  display: flex;
+  width: 94%px;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+#list-movie.movie{
+  margin: 5px 10px;
+}
