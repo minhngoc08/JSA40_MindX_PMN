@@ -81,6 +81,7 @@
   width: 94%px;
   justify-content: space-around;
   flex-wrap:wrap;
+  border-radius: 10px;
 }
 #list-movie.movie{
   margin: 5px 10px;
