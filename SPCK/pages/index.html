@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tin Tức</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .logo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgb(13, 71, 21);
+        }
+        .sign_in{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(65, 100, 74);
+            border-radius: 5px;
+            color: rgb(241, 240, 233);
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .sign_in:hover{
+            text-decoration: underline;
+            background-color: rgb(13, 71, 21);
+        }
+        .sign_up{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(65, 100, 74);
+            border-radius: 5px;
+            color: rgb(241, 240, 233);
+            padding: 10px;
+        }
+        .sign_up:hover{
+            text-decoration: underline;
+            background-color: rgb(13, 71, 21);
+        }
+        .bg-green-600{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(65, 100, 74);
+            color:rgb(241, 240, 233);
+        }
+        .book{
+            font-family: 'Times New Roman', Times, serif;
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            text-align: center;
+        }
+        .book:hover{
+            transform: scale(1.08);
+            transition: transform 0.3s ease-in-out;
+        }
+        #list-book{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 70px;
+            background-color: rgba(65, 100, 74, 0.317);
+            padding: 20px;
+        }
+        div.book img{
+            width: 150px;
+            height: 200px;
+        }
+        .p-4 {
+            padding: 0;
+        }
+        .heading5{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(13, 71, 21);
+        }
+    </style>
+</head>
+<body style="background-color: rgb(241, 240, 233);">
+<!-- Header -->
+    <header style="background-color: rgb(241, 240, 233);" class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="logo">NEWS</div>
+        <div class="flex items-center gap-4">
+            <button class="sign_in"><a href =signin.html>Sign in</a></button>
+            <button class="sign_up"><a href =signup.html>Sign up</a></button>
+        </div>
+    </header>
+
+<!-- Menu-->
+    <nav class="bg-green-600 text-white p-2 flex justify-evenly">
+        <ul class="flex justify-around items-center w-full text-sm">
+            <li><a href="#" class="hover:underline">LATES NEWS</a></li>
+            <li><a href="#" class="hover:underline">MOST POPULAR</a></li>
+            <li><a href="#" class="hover:underline">HARDCOVER FICTION</a></li>
+            <li><a href="#" class="hover:underline">MOVIE REVIEWS</a></li>
+            <li><a href="#" class="hover:underline">RSS FEED</a></li>
+            <li><a href="#" class="hover:underline">TOP STORIES</a></li>
+        </ul>
+    </nav>
+
+<!-- News -->
+    <main class="p-4 flex flex-wrap justify-evenly gap-4">
+        <div id="title"></div>
+        <div id="list-book"></div>
+
+        <div id="top_stories"></div>
+    </main>
+
+<!-- Footer -->
+    <footer style="background-color: rgb(65, 100, 74);" class="bg-gray-800 text-white p-4 text-center">
+        © 2025 NEWS. All rights reserved. <br>
+        <a href="#" class="text-white hover:underline">Contact us</a>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
