@@ -1,0 +1,142 @@
+/* Header */
+.body{
+    background-color: #f5f1d4;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sign_up_bar{
+    width: 100%;
+    height: 40px;
+    background-color: #81BFDA ;
+    display: flex;
+    justify-content:space-between;
+}
+#clock{
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.sign_up_button{
+    color: white;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sign_up_button:hover{
+    background-color: #B1F0F7;
+    transition: background-color 0.5s ease;
+}
+.header{
+    font-size: 90px;
+    font-weight: bolder;
+    text-align: center;
+}
+.caption{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: -13px;
+}
+
+/* Menu */
+.menu_line{
+    width: 100%;
+    height: 3px;
+    background-color: #81BFDA;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu_list{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.list:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Hardcover fictions */
+#title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+#list-book{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 70px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+#div.book img:hover{
+    transition: background-color 0.5s ease;
+    background-color: #F5F0CD;
+}
+div.book img{
+    width: 170px;
+    height: 230px;
+    object-fit: cover;  
+}
+.book {
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    background: white;
+    padding: 20px;
+}
+.p-4 {
+    padding: 0;
+}
+
+/* Top Stories */
+#topstories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 70px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;  
+    font-weight: bold;  
+    text-align: center;
+}
+.topstories img{
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+h6 {
+    width: 250px;
+}
+
+/* Footer */
+.footer{
+    background-color: #81BFDA;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    margin-top: 30px;
+}
+.contact_us{
+    margin-right: 10px;
+    cursor: pointer;
+}
+ .contact_us:hover{
+    color: #B1F0F7;
+    transition: color 0.5s ease;
+    text-decoration: underline;
+}
+

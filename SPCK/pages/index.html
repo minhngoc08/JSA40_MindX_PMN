@@ -3,114 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Tin Tức</title>
+    <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .logo {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 3rem;
-            font-weight: bold;
-            color: rgb(13, 71, 21);
-        }
-        .sign_in{
-            font-family: 'Times New Roman', Times, serif;
-            background-color: rgb(65, 100, 74);
-            border-radius: 5px;
-            color: rgb(241, 240, 233);
-            padding: 10px;
-            margin-right: 10px;
-        }
-        .sign_in:hover{
-            text-decoration: underline;
-            background-color: rgb(13, 71, 21);
-        }
-        .sign_up{
-            font-family: 'Times New Roman', Times, serif;
-            background-color: rgb(65, 100, 74);
-            border-radius: 5px;
-            color: rgb(241, 240, 233);
-            padding: 10px;
-        }
-        .sign_up:hover{
-            text-decoration: underline;
-            background-color: rgb(13, 71, 21);
-        }
-        .bg-green-600{
-            font-family: 'Times New Roman', Times, serif;
-            background-color: rgb(65, 100, 74);
-            color:rgb(241, 240, 233);
-        }
-        .book{
-            font-family: 'Times New Roman', Times, serif;
-            width: 150px;
-            height: auto;
-            object-fit: cover;
-            text-align: center;
-        }
-        .book:hover{
-            transform: scale(1.08);
-            transition: transform 0.3s ease-in-out;
-        }
-        #list-book{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 70px;
-            background-color: rgba(65, 100, 74, 0.317);
-            padding: 20px;
-        }
-        div.book img{
-            width: 150px;
-            height: 200px;
-        }
-        .p-4 {
-            padding: 0;
-        }
-        .heading5{
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: rgb(13, 71, 21);
-        }
-    </style>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
-<body style="background-color: rgb(241, 240, 233);">
+<body class="body">
 <!-- Header -->
-    <header style="background-color: rgb(241, 240, 233);" class="bg-white shadow-md p-4 flex justify-between items-center">
-        <div class="logo">NEWS</div>
-        <div class="flex items-center gap-4">
-            <button class="sign_in"><a href =signin.html>Sign in</a></button>
-            <button class="sign_up"><a href =signup.html>Sign up</a></button>
-        </div>
-    </header>
-
-<!-- Menu-->
-    <nav class="bg-green-600 text-white p-2 flex justify-evenly">
-        <ul class="flex justify-around items-center w-full text-sm">
-            <li><a href="#" class="hover:underline">LATES NEWS</a></li>
-            <li><a href="#" class="hover:underline">MOST POPULAR</a></li>
-            <li><a href="#" class="hover:underline">HARDCOVER FICTION</a></li>
-            <li><a href="#" class="hover:underline">MOVIE REVIEWS</a></li>
-            <li><a href="#" class="hover:underline">RSS FEED</a></li>
-            <li><a href="#" class="hover:underline">TOP STORIES</a></li>
+    <div class="sign_up_bar" style="background-color: #81BFDA;">
+        <div id = "clock"></div>
+        <button class="sign_up_button"><a href =signup.html>Sign up</a></button>
+    </div>
+    <h1 class="header">GlobeWatch</h1>
+    <p class="caption">- Breaking News, Trusted Insights -</p>
+    <hr class="menu_line">
+    <nav class="menu_bg">
+        <ul class="menu_list">
+            <li><a href="#" class="list">LATES NEWS</a></li>
+            <li><a href="#" class="list">MOST POPULAR</a></li>
+            <li><a href="#" class="list">HARDCOVER FICTION</a></li>
+            <li><a href="#" class="list">MOVIE REVIEWS</a></li>
+            <li><a href="#" class="list">TOP STORIES</a></li>
         </ul>
     </nav>
+    <hr class="menu_line">
 
-<!-- News -->
-    <main class="p-4 flex flex-wrap justify-evenly gap-4">
+<!-- News: Hardcover fictions -->
+    <main class="hardcover_fictions_bar">
         <div id="title"></div>
         <div id="list-book"></div>
-
-        <div id="top_stories"></div>
     </main>
+    <br>
+
+<!-- News: Top stories -->
+    <main class="top_stories_bar">
+        <div id="title">Top stories</div>
+        <div id="topstories"></div>
+    </main>
+    
+
+
 
 <!-- Footer -->
-    <footer style="background-color: rgb(65, 100, 74);" class="bg-gray-800 text-white p-4 text-center">
-        © 2025 NEWS. All rights reserved. <br>
-        <a href="#" class="text-white hover:underline">Contact us</a>
+    <footer class="footer">
+        <p>© 2025 NEWS. All rights reserved.</p>
+        <p class="contact_us">Contact us</p>
     </footer>
 
+    <script src="/SPCK/css/index.css" ></script>
     <script src="../js/index.js"></script>
+    <script src = "../js/clock.js"> </script>
+
 </body>
 </html>
