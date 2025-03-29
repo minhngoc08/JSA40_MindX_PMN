@@ -1,0 +1,74 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #81BFDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+.login-container {
+    background-color: #f5f1d4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    width: 300px;
+}
+h1 {
+    padding: 5px;
+    margin-top: -2px;
+}
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.social-login a {
+    text-decoration: none;
+    color: rgb(241, 240, 233);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.google { background-color: #db4437; }
+.facebook { background-color: #4267B2; }
+.apple { background-color: #333; }
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input[type="email"], input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: rgb(233, 118, 43);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background-color: rgb(206, 91, 27);
+    text-decoration: underline;
+}
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,53 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #81BFDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+.reset-password-container {
+    background-color: #f5f1d4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    width: 300px;
+    position: relative;
+}
+h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    margin-top: 2px;
+}
+p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input[type="email"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: rgb(233, 118, 43);
+    color:rgb(241, 240, 233);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(220, 92, 28);
+    text-decoration: underline;
+}

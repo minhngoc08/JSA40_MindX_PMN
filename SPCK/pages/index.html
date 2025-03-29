@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Globe Watch - Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
+<!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
 <body class="body">
 <!-- Header -->
     <div class="sign_up_bar" style="background-color: #81BFDA;">
@@ -19,29 +25,48 @@
     <nav class="menu_bg">
         <ul class="menu_list">
             <li><a href="#" class="list">LATES NEWS</a></li>
-            <li><a href="#" class="list">MOST POPULAR</a></li>
-            <li><a href="#" class="list">HARDCOVER FICTION</a></li>
+            <li><a href="#title" class="list">HARDCOVER FICTION</a></li>
             <li><a href="#" class="list">MOVIE REVIEWS</a></li>
-            <li><a href="#" class="list">TOP STORIES</a></li>
+            <li><a href="#title2" class="list">TOP STORIES</a></li>
+            <li><a href="#title3" class="list">NEWSWIRE</a></li>
         </ul>
     </nav>
     <hr class="menu_line">
 
+
+
+
+ <div class="box1">
+    <!-- News: Top stories -->
+    <main class="top_stories_bar">
+            <div id="title2">Top stories</div>
+            <div id="topstories"></div>
+    </main>
+
+    <!-- News: New Swire -->
+    <main class="newswire_bar">
+        <div id="title3">Newswire</div>
+        <div class="ns_head">
+            <hr class="ns_line">
+            <h3 class="ns_head_name">World</h3>
+            <hr class="ns_line">
+        </div>
+        <div id="newswire_world"></div>
+        <div class="ns_head">
+            <hr class="ns_line">
+            <h3 class="ns_head_name">Business</h3>
+            <hr class="ns_line">
+        </div>
+        <div id="newswire"></div>
+    </main>
+ </div>
+ <br>
+    
 <!-- News: Hardcover fictions -->
     <main class="hardcover_fictions_bar">
         <div id="title"></div>
         <div id="list-book"></div>
     </main>
-    <br>
-
-<!-- News: Top stories -->
-    <main class="top_stories_bar">
-        <div id="title">Top stories</div>
-        <div id="topstories"></div>
-    </main>
-    
-
-
 
 <!-- Footer -->
     <footer class="footer">
