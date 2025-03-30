@@ -6,10 +6,11 @@
     <title>Globe Watch - Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
-<!-- Swiper CSS -->
+    <!-- Swiper CSS -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
@@ -24,7 +25,7 @@
     <hr class="menu_line">
     <nav class="menu_bg">
         <ul class="menu_list">
-            <li><a href="#" class="list">LATES NEWS</a></li>
+            <li><a href="#title4" class="list">ARTS NEWS</a></li>
             <li><a href="#title" class="list">HARDCOVER FICTION</a></li>
             <li><a href="#" class="list">MOVIE REVIEWS</a></li>
             <li><a href="#title2" class="list">TOP STORIES</a></li>
@@ -33,13 +34,10 @@
     </nav>
     <hr class="menu_line">
 
-
-
-
  <div class="box1">
     <!-- News: Top stories -->
     <main class="top_stories_bar">
-            <div id="title2">Top stories</div>
+            <div id="title2"><a href="../pages/index_ts.html" class="">Top stories</a></div>
             <div id="topstories"></div>
     </main>
 
@@ -65,9 +63,63 @@
 <!-- News: Hardcover fictions -->
     <main class="hardcover_fictions_bar">
         <div id="title"></div>
-        <div id="list-book"></div>
-    </main>
+        
+    </main>    
 
+    <div class="w3-container">
+
+      </div>
+      
+      <div class="w3-content" style="max-width:800px">
+            <div id="list-book"></div>
+      </div>
+      
+      <div class="w3-center">
+        <div class="w3-section">
+          <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+          <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+        </div>
+        <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+        <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+        <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " w3-red";
+      }
+      </script>
+
+
+
+    <br>
+<!-- News: Art News -->
+    <h2 id="title4">Arts News</h2>
+    <div id="rss-feed"></div>
+    
 <!-- Footer -->
     <footer class="footer">
         <p>© 2025 NEWS. All rights reserved.</p>

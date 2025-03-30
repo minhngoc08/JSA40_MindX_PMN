@@ -12,7 +12,7 @@ async function loadinghardcoverfiction(){
     const res = await fetch(URL);
     const data = await res.json();
     const result = data.results;
-    // console.log(result);
+    console.log(result);
 
     let lstBook = document.getElementById('list-book');
     let title = document.getElementById('title');
@@ -41,15 +41,14 @@ async function loadinghardcoverfiction(){
         lstBook.appendChild(element);
     }
 
-
-
 }   
+
 async function loadingtopstories(){
     // async <-> await
     const responseTopStories = await fetch(URL2);
     const dataTopStories = await responseTopStories.json();
     const resultTopStories = dataTopStories.results;
-    console.log(resultTopStories);
+    // console.log(resultTopStories);
 
 
     let topstories = document.getElementById('topstories');
@@ -74,7 +73,7 @@ async function loadingnewswire(){
     const responseNewswire = await fetch(URL3);
     const dataNewswire = await responseNewswire.json();
     const resultNewswire = dataNewswire.results;
-    console.log(resultNewswire);
+    // console.log(resultNewswire);
 
 
     let newswire = document.getElementById('newswire');
@@ -86,7 +85,7 @@ async function loadingnewswire(){
         
             <a href="${resultNewswire[i].url}" class = "newswire">
             <img src="${resultNewswire[i].multimedia[0].url}" alt="">
-            <h6>${resultNewswire[i].title}</h6>
+            <h7>${resultNewswire[i].title}</h7>
             </a>
         `
         newswire.appendChild(element);
@@ -104,20 +103,53 @@ async function loadingnewswire_world(){
 
     let newswire_world = document.getElementById('newswire_world');
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
         element = document.createElement("div");
         
         element.innerHTML = `
         
             <a href="${resultNewswire_world[i].url}" class = "newswire_world">
             <img src="${resultNewswire_world[i].multimedia[0].url}" alt="">
-            <h6>${resultNewswire_world[i].title}</h6>
+            <h7>${resultNewswire_world[i].title}</h7>
             </a>
         `
         newswire_world.appendChild(element);
     }
     console.log(newswire_world);
 }
+
+const apiUrl = "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml";
+
+        fetch(apiUrl)
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(xml => {
+                let items = xml.getElementsByTagName("item");
+                let output = "";
+
+                for (let i = 0; i < 6; i++) {
+                    let title = items[i].getElementsByTagName("title")[0].textContent;
+                    let link = items[i].getElementsByTagName("link")[0].textContent;
+                    let description = items[i].getElementsByTagName("description")[0].textContent;
+
+                    // Lấy ảnh minh họa từ <media:content>
+                    let media = items[i].getElementsByTagName("media:content");
+                    let imageUrl = media.length > 0 ? media[0].getAttribute("url") : "https://via.placeholder.com/120x80";
+
+                    output += `
+                        <div class="article">
+                            <img src="${imageUrl}" alt="Article Image">
+                            <div class="article-content">
+                                <a href="${link}" target="_blank">${title}</a>
+                                <p>${description}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                document.getElementById("rss-feed").innerHTML = output;
+            })
+            .catch(error => console.error("Lỗi khi tải XML:", error));
 
 loadinghardcoverfiction()
 loadingtopstories()
