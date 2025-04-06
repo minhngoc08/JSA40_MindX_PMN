@@ -7,6 +7,43 @@ const URL3 = `https://api.nytimes.com/svc/news/v3/content/nyt/business.json?api-
 const URL4 = `https://api.nytimes.com/svc/news/v3/content/nyt/world.json?api-key=${TMDB_API_KEY}`
 
 // Hàm bất đồng bộ
+// HARDCOVER FICTIONFICTION
+// async function loadinghardcoverfiction(){
+    // async <-> await
+//     const res = await fetch(URL);
+//     const data = await res.json();
+//     const result = data.results;
+//     console.log(result);
+
+//     let lstBook = document.getElementById('list-book');
+//     let title = document.getElementById('title');
+
+//     let element = document.createElement("div");
+    
+//     element.innerHTML = `
+//         <a href="#">
+//         <h5 class="heading5">
+//         ${result.display_name}
+//         </h5>
+//         </a>
+//     `
+//     title.appendChild(element);
+
+
+//     for (let i = 0; i < 10; i++) {
+//         element = document.createElement("div");
+//         element.classList.add("book");
+//         element.innerHTML = `
+//         <a href="${result.books[i].amazon_product_url}  ">
+//             <img src="${result.books[i].book_image}" alt="${result.books[i].title}">
+//             <h5>${result.books[i].title}</h5>
+//             </a>
+//         `
+//         lstBook.appendChild(element);
+//     }
+
+// }   
+
 async function loadinghardcoverfiction(){
     // async <-> await
     const res = await fetch(URL);
@@ -18,7 +55,7 @@ async function loadinghardcoverfiction(){
     let title = document.getElementById('title');
 
     let element = document.createElement("div");
-    
+
     element.innerHTML = `
         <a href="#">
         <h5 class="heading5">
@@ -28,21 +65,23 @@ async function loadinghardcoverfiction(){
     `
     title.appendChild(element);
 
-
-    for (let i = 0; i < 10; i++) {
-        element = document.createElement("div");
-        element.classList.add("book");
-        element.innerHTML = `
-        <a href="${result.books[i].amazon_product_url}  ">
-            <img src="${result.books[i].book_image}" alt="${result.books[i].title}">
-            <h5>${result.books[i].title}</h5>
-            </a>
+    for (let i = 0; i < 8; i++) {
+                element = document.createElement("div");
+                element.classList.add("book");
+                element.innerHTML = `
+                <a href="${result.books[i].amazon_product_url}  ">
+                    <img src="${result.books[i].book_image}" alt="${result.books[i].title}">
+                    <h5>${result.books[i].title}</h5>
+                    </a>
         `
-        lstBook.appendChild(element);
+        hardcoverfiction.appendChild(element);
     }
+    console.log(hardcoverfiction);
+}
 
-}   
 
+
+// TOP STORIES
 async function loadingtopstories(){
     // async <-> await
     const responseTopStories = await fetch(URL2);
@@ -53,7 +92,7 @@ async function loadingtopstories(){
 
     let topstories = document.getElementById('topstories');
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 3; i < 8; i++) {
         element = document.createElement("div");
         
         element.innerHTML = `
@@ -68,6 +107,7 @@ async function loadingtopstories(){
     console.log(topstories);
 }
 
+// NEWSWIRE-BUSINESS
 async function loadingnewswire(){
     // async <-> await
     const responseNewswire = await fetch(URL3);
@@ -78,7 +118,7 @@ async function loadingnewswire(){
 
     let newswire = document.getElementById('newswire');
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 6; i++) {
         element = document.createElement("div");
         
         element.innerHTML = `
@@ -93,17 +133,18 @@ async function loadingnewswire(){
     console.log(newswire);
 }
 
+// NEWSWIRE-WORLD
 async function loadingnewswire_world(){
     // async <-> await
     const responseNewswire_world = await fetch(URL4);
     const dataNewswire_world = await responseNewswire_world.json();
     const resultNewswire_world = dataNewswire_world.results;
-    console.log(resultNewswire_world);
+    // console.log(resultNewswire_world);
 
 
     let newswire_world = document.getElementById('newswire_world');
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 17; i < 21; i++) {
         element = document.createElement("div");
         
         element.innerHTML = `
@@ -118,6 +159,7 @@ async function loadingnewswire_world(){
     console.log(newswire_world);
 }
 
+// ART NEWS
 const apiUrl = "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml";
 
         fetch(apiUrl)
@@ -127,7 +169,7 @@ const apiUrl = "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml";
                 let items = xml.getElementsByTagName("item");
                 let output = "";
 
-                for (let i = 0; i < 6; i++) {
+                for (let i = 1; i < 7; i++) {
                     let title = items[i].getElementsByTagName("title")[0].textContent;
                     let link = items[i].getElementsByTagName("link")[0].textContent;
                     let description = items[i].getElementsByTagName("description")[0].textContent;
