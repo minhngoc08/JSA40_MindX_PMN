@@ -1,2 +1,6 @@
 717af2927cd94308996935345c34f55c
 VdE9CXnPJot3R7w4BqpV3SAPX1yv6Do3
+
+màu nền: #fffaf4
+màu hồng đậm: #fa335e
+màu hồng nhạt: #F7CFD8 

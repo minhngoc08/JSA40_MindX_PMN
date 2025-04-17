@@ -1,0 +1,100 @@
+.body{
+    background-image: url(../img/background.png);
+    font-family: 'Times New Roman', Times, serif;
+}
+.sign_up_bar{
+    background-color: #F7CFD8;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -8px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#clock{
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.homepage_box{
+    margin-right: 20px;
+}
+.btnHomePage{
+    color: black;
+    padding: 11px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F7CFD8;
+    border: none;
+    text-decoration: none;
+}
+.btnHomePage:hover{
+    color: #fa335e;
+    background-color: #fffaf4;
+    transition: background-color 0.5s ease;
+}
+
+.account-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    margin: 30px auto;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+
+/* Footer */
+.footer{
+    margin-left: -10px;
+    margin-right: -8px;
+    background-color: #F7CFD8;
+    height: 230px;
+    color: black;
+    margin-top: 70px;
+}
+.footer h2{
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+.footer p{
+    color: black;
+    margin-left: 50px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.footer_link{
+    color: black;
+    margin-left: 50px;
+    font-weight: bold;
+}
+.footer_link:hover{
+    text-decoration: underline;
+    color:#fa335e;
+}
+.footer_2025{
+    text-align: center;
+}

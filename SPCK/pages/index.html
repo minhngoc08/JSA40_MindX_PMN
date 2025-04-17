@@ -6,33 +6,28 @@
     <title>Globe Watch - Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
-    <!-- Swiper CSS -->
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <style>
-        .mySlides {display:none}
-    </style>
 </head>
 
-<body class="body">
+<body class="body"> 
 <!-- Header -->
-    <div class="sign_up_bar" style="background-color: #81BFDA;">
+    <div class="sign_up_bar"> 
         <div id = "clock"></div>
-        <button class="sign_up_button"><a href =signup.html>Sign up</a></button>
+        <div class="signup_box">
+            <button id="btnSignUp"><a href =signup.html>Sign up</a></button>
+            <button id="btnSignIn" style="display: none;">Sign in</button>
+            <button id="btnAccount" style="display: none;"><a href="./account.html">Account</a></button>
+            <button id="btnLogOut" style="display: none;">Log out</button>
+        </div>
     </div>
     <h1 class="header">GlobeWatch</h1>
     <p class="caption">- Breaking News, Trusted Insights -</p>
     <hr class="menu_line">
     <nav class="menu_bg">
-        <ul class="menu_list">
-            <li><a href="#title4" class="list">ARTS NEWS</a></li>
-            <li><a href="#title" class="list">BUY HARDCOVER FICTION</a></li>
-            <li><a href="#" class="list">BOOK REVIEWS</a></li>
+        <ul class="menu_list"> 
             <li><a href="#title2" class="list">TOP STORIES</a></li>
             <li><a href="#title3" class="list">NEWSWIRE</a></li>
+            <li><a href="#title" class="list">BUY HARDCOVER FICTIONS</a></li>
+            <li><a href="#title4" class="list">ARTS NEWS</a></li>
         </ul>
     </nav>
     <hr class="menu_line">
@@ -40,7 +35,7 @@
  <div class="box1">
     <!-- News: Top stories -->
     <main class="top_stories_bar">
-            <div id="title2"><a href="../pages/index_ts.html" class="">Top stories</a></div>
+            <div id="title2">Top stories</a></div>
             <div id="topstories"></div>
     </main>
 
@@ -66,35 +61,37 @@
 <!-- News: Hardcover fictions -->
     <main class="hardcover_fictions_bar">
         <div id="title"></div>
-        <div class="container">
-            <div class="book_container">
-            <div id="hardcoverfiction"></div>
-            </div> 
-                <br>
-            <div class="w3-center">
-                <div class="w3-section">
-                <button class="pre_button" onclick="plusDivs(-1)">❮ Prev</button>
-                <button class="pre_button" onclick="plusDivs(1)">Next ❯</button>
-                </div>
-                <button class="demo_button" onclick="currentDiv(1)">1</button> 
-                <button class="demo_button" onclick="currentDiv(2)">2</button> 
-            </div>
-        </div>
-    <br>
+        <div id="hardcoverfiction"></div> <br>
+        <p class="hardcoverfiction_note">Click the picture to buy</p>
+    </main>
+
 <!-- News: Art News -->
     <h2 id="title4">Arts News</h2>
     <div id="rss-feed"></div>
     
 <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 NEWS. All rights reserved.</p>
-        <p class="contact_us">Contact us</p>
-    </footer>
+<footer class="footer">
+    <div>
+      <div class="footer_main">
+        <h2>Globe Watch</h2>
+        <p>Providing global news updates quickly, accurately, and impartially. We bring the world closer to you every day.</p>
+      </div> <br>
+      
+      <div>
+        <p class="footer_text"><strong>Phone:</strong> 123 982 8203</p> 
+        <p class="footer_text"><strong>Addess:</strong> 29T1 Hoang Dao Thuy, Hanoi</p> 
+        <p class="footer_link">Privacy policy</p>
+        <p class="footer_link">Terms of use</p>
+      </div>
+    </div>
+    <br>
+      <p class="footer_2025">© 2025 NEWS. All rights reserved.</p>
+  </footer>
 
     <script src="/SPCK/css/index.css" ></script>
     <script src="../js/index.js"></script>
     <script src = "../js/clock.js"> </script>
-    <script src="../js/container.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 </html>

@@ -1,35 +1,68 @@
 /* Header */
 .body{
-    background-color: white;
+    background-image: url(../img/background.png);
     font-family: 'Times New Roman', Times, serif;
 }
 .sign_up_bar{
     width: 100%;
     height: 40px;
-    background-color: #81BFDA ;
+    background-color: #F7CFD8 ;
     display: flex;
     justify-content:space-between;
 }
 #clock{
-    color: white;
+    color: black;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
 }
-.sign_up_button{
-    color: white;
+.signup_box{
+    display: flex;
+    justify-content: right;
+}
+#btnSignUp{
+    color:black;
     margin-right: 20px;
     padding: 5px;
     font-size: 15px;
     cursor: pointer;
     border-radius: 5px;
 }
-.sign_up_button:hover{
-    background-color: #B1F0F7;
+#btnSignUp:hover{
+    color: #fa335e;
+    background-color: #fffaf4;
     transition: background-color 0.5s ease;
 }
+#btnAccount{
+    color: black;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#btnAccount:hover{
+    color: #fa335e;
+    background-color: #fffaf4;
+    transition: background-color 0.5s ease;
+}
+#btnLogOut{
+    color: black;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#btnLogOut:hover{
+    color: #fa335e;
+    background-color: #fffaf4;
+    transition: background-color 0.5s ease;
+}
+
 .header{
+    color: black;
     font-size: 90px;
     font-weight: bolder;
     text-align: center;
@@ -45,7 +78,7 @@
 .menu_line{
     width: 100%;
     height: 3px;
-    background-color: #81BFDA;
+    background-color: #F7CFD8;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -55,8 +88,9 @@
     justify-content: space-around;
 }
 .list:hover{
+    color:#fa335e;
+    transition: background-color 0.5s ease;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 /* Box 1 */
@@ -74,9 +108,6 @@
     margin-bottom: 10px;
     padding: 10px;
 }
-#title2:hover{
-    text-decoration: underline;
-}
 #topstories{
     margin-left: 28px;
     width: 700px;
@@ -86,8 +117,8 @@ a.topstories{
     cursor: pointer;
 }
 .topstories img{
-    width: 350px;
-    height: 100%;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     margin-right: 20px;
     margin-bottom: 25px;
@@ -100,7 +131,7 @@ h6 {
     font-weight: bold;
 }
 h6:hover{
-    color: #56aace;
+    color: #fa335e;
     transition: color 0.2s ease;
     text-decoration: underline;
 }
@@ -120,9 +151,6 @@ main.newswire_bar{
     margin-top: 15px;
     margin-left: 25px;
 }
-#title3:hover{
-    text-decoration: underline;
-}
 .ns_head{
     display: flex;
     justify-content: center;
@@ -131,7 +159,7 @@ main.newswire_bar{
 .ns_line{
     width: 30px;
     height: 3px;
-    background-color: darkred;
+    background-color: #f6a3b5;
     margin-top: 22px;
     margin-left: 10px;
     margin-right: 10px;
@@ -139,7 +167,7 @@ main.newswire_bar{
 .ns_head_name{
     font-size: 18px;
     font-weight: bold;
-    color: darkred;
+    color: #f6a3b5;
     padding: 10px;
 }
 #newswire{
@@ -200,7 +228,7 @@ h7 {
     font-weight:normal;
 }
 h7:hover{
-    color: #56aace;
+    color: #fa335e;
     transition: color 0.2s ease;
     text-decoration: underline;
 }
@@ -208,10 +236,10 @@ h7:hover{
 /* Hardcover fictions */
 .book {
     border-radius: 10px;
-    width: 230px;
-    height: 300px;
+    width: 180px;
+    height: 260px;
     background: white;
-    padding: 20px;
+    padding: 10px;
 }
 .book:hover{
     transform: scale(1.1);  
@@ -225,9 +253,6 @@ h7:hover{
     margin-bottom: 10px;
     padding: 10px;
 }
-#title:hover{
-    text-decoration: underline;
-}
 #hardcoverfiction{
     display: flex;
     flex-wrap: wrap;
@@ -240,8 +265,8 @@ h7:hover{
     margin-right: 20px;
 }
 div.book img{
-    width: 200px;
-    height: 230px;
+    width: 160px;
+    height: 200px;
     object-fit: cover;  
     border-radius: 5px;
 }
@@ -284,7 +309,7 @@ h2{
 }
 .article a {
     text-decoration: none;
-    color: #0077cc;
+    color: #e3788f;
     font-size: 18px;
     font-weight: bold;
 }
@@ -294,25 +319,36 @@ h2{
 .article p {
     color: #555;
 }
+.hardcoverfiction_note{
+    color:#fa335e;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+}
 
 /* Footer */
 .footer{
-    background-color: #81BFDA;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 15px;
-    margin-top: 30px;
+    background-color: #F7CFD8;
+    height: 270px;
+    color: black;
+    margin-top: 70px;
 }
-.contact_us{
-    margin-right: 10px;
-    cursor: pointer;
+.footer h2{
+    font-size: 50px;
 }
- .contact_us:hover{
-    color: #B1F0F7;
-    transition: color 0.5s ease;
+.footer p{
+    margin-left: 50px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.footer_link{
+    margin-left: 50px;
+    font-weight: bold;
+}
+.footer_link:hover{
     text-decoration: underline;
+    color:#fa335e;
 }
-
+.footer_2025{
+    text-align: center;
+}

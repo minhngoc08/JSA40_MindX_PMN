@@ -35,7 +35,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
         alert(`Welcome back, ${user.fullname}!`);
         // Chuyển hướng đến trang chính (có thể thay đổi URL tùy theo cấu trúc dự án)
-        window.location.href = 'SPCK/pages/index.html';
+        window.location.href = './index.html';
     } else {
         alert('Invalid email or password');
     }
@@ -52,3 +52,5 @@ function getUsersFromStorage() {
     const users = localStorage.getItem('users');
     return users ? JSON.parse(users) : [];
 }
+localStorage.setItem("isLoggedIn", "true");
+localStorage.removeItem("registerFailed");

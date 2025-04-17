@@ -1,6 +1,6 @@
 body {
-    font-family:'Times New Roman', Times, serif;
-    background-color: #81BFDA;
+    background-image: url(../img/background.png);
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,10 +8,10 @@ body {
     margin: 0; 
 }
 .login-container {
-    background-color: #f5f1d4;
+    background-color: #f9eef0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px #fa335e;
     width: 300px;
 }
 h1 {
@@ -47,12 +47,12 @@ label {
 }
 input[type="email"], input[type="password"] {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #fffaf4;
     border-radius: 4px;
 }
 button {
-    background-color: rgb(233, 118, 43);
-    color: white;
+    background-color: #fa335e;
+    color: #fffaf4;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -61,11 +61,12 @@ button {
     font-weight: bold;
 }
 button:hover {
-    background-color: rgb(206, 91, 27);
+    background-color: #F7CFD8;
     text-decoration: underline;
+    color:#fa335e;
 }
 button:disabled {
-    background-color: #ddd;
+    background-color: #fffaf4;
     cursor: not-allowed;
 }
 .forgot-password {

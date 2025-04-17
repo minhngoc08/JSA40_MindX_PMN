@@ -5,45 +5,8 @@ const URL = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fictio
 const URL2 = `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${TMDB_API_KEY}`;
 const URL3 = `https://api.nytimes.com/svc/news/v3/content/nyt/business.json?api-key=${TMDB_API_KEY}`;
 const URL4 = `https://api.nytimes.com/svc/news/v3/content/nyt/world.json?api-key=${TMDB_API_KEY}`
-
-// Hàm bất đồng bộ
-// HARDCOVER FICTIONFICTION
-// async function loadinghardcoverfiction(){
-    // async <-> await
-//     const res = await fetch(URL);
-//     const data = await res.json();
-//     const result = data.results;
-//     console.log(result);
-
-//     let lstBook = document.getElementById('list-book');
-//     let title = document.getElementById('title');
-
-//     let element = document.createElement("div");
-    
-//     element.innerHTML = `
-//         <a href="#">
-//         <h5 class="heading5">
-//         ${result.display_name}
-//         </h5>
-//         </a>
-//     `
-//     title.appendChild(element);
-
-
-//     for (let i = 0; i < 10; i++) {
-//         element = document.createElement("div");
-//         element.classList.add("book");
-//         element.innerHTML = `
-//         <a href="${result.books[i].amazon_product_url}  ">
-//             <img src="${result.books[i].book_image}" alt="${result.books[i].title}">
-//             <h5>${result.books[i].title}</h5>
-//             </a>
-//         `
-//         lstBook.appendChild(element);
-//     }
-
-// }   
-
+const URL5 = `https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=${TMDB_API_KEY}`
+   
 async function loadinghardcoverfiction(){
     // async <-> await
     const res = await fetch(URL);
@@ -65,7 +28,7 @@ async function loadinghardcoverfiction(){
     `
     title.appendChild(element);
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 10; i++) {
                 element = document.createElement("div");
                 element.classList.add("book");
                 element.innerHTML = `
@@ -79,15 +42,13 @@ async function loadinghardcoverfiction(){
     console.log(hardcoverfiction);
 }
 
-
-
 // TOP STORIES
 async function loadingtopstories(){
     // async <-> await
     const responseTopStories = await fetch(URL2);
     const dataTopStories = await responseTopStories.json();
     const resultTopStories = dataTopStories.results;
-    // console.log(resultTopStories);
+    console.log(resultTopStories);
 
 
     let topstories = document.getElementById('topstories');
@@ -113,7 +74,7 @@ async function loadingnewswire(){
     const responseNewswire = await fetch(URL3);
     const dataNewswire = await responseNewswire.json();
     const resultNewswire = dataNewswire.results;
-    // console.log(resultNewswire);
+    console.log(resultNewswire);
 
 
     let newswire = document.getElementById('newswire');
@@ -139,7 +100,7 @@ async function loadingnewswire_world(){
     const responseNewswire_world = await fetch(URL4);
     const dataNewswire_world = await responseNewswire_world.json();
     const resultNewswire_world = dataNewswire_world.results;
-    // console.log(resultNewswire_world);
+    console.log(resultNewswire_world);
 
 
     let newswire_world = document.getElementById('newswire_world');
@@ -197,3 +158,4 @@ loadinghardcoverfiction()
 loadingtopstories()
 loadingnewswire()
 loadingnewswire_world()
+loadingbook_reviews()
